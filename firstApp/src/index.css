@@ -3,10 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  font-size: calc(14px + (22-14) * ((100vw - 320px) / (1900-300)));
 }
 
 body {
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 a {

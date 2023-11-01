@@ -1,3 +1,4 @@
+import Input from "../../components/input";
 import "./Category.css";
 
 const Category = () => {
@@ -5,26 +6,10 @@ const Category = () => {
     <div className="category-container">
       <h2 className="sidebar-title">Category</h2>
       <div>
-        <label htmlFor="" className="sidebar-label-container">
-          <input type="radio" name="text" id="" />
-          <span className="checkmark"></span>All
-        </label>
-        <label htmlFor="" className="sidebar-label-container">
-          <input type="radio" name="text" id="" />
-          <span className="checkmark"></span>Sneakers
-        </label>
-        <label htmlFor="" className="sidebar-label-container">
-          <input type="radio" name="text" id="" />
-          <span className="checkmark"></span>Flats
-        </label>
-        <label htmlFor="" className="sidebar-label-container">
-          <input type="radio" name="text" id="" />
-          <span className="checkmark"></span>Sandals
-        </label>
-        <label htmlFor="" className="sidebar-label-container">
-          <input type="radio" name="text" id="" />
-          <span className="checkmark"></span>Heels
-        </label>
+        <Input />
+        <Input />
+        <Input />
+        <Input />
       </div>
     </div>
   );
