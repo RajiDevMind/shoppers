@@ -6,30 +6,30 @@ const Category = ({ handleChange }) => {
     <div className="category-container">
       <h2 className="sidebar-title">Category</h2>
       <div>
-        <label htmlFor="" className="sidebar-label-container">
+        <label className="sidebar-label-container">
           <input onChange={handleChange} type="radio" value="" name="test2" />
           <span className="checkmark"></span>All
         </label>
         <Input
-          onChange={handleChange}
+          handleChange={handleChange}
           value="sneakers"
           title="Sneakers"
           name="test"
         />
         <Input
-          onChange={handleChange}
+          handleChange={handleChange}
           value="flats"
           title="Flats"
           name="test"
         />
         <Input
-          onChange={handleChange}
+          handleChange={handleChange}
           value="sandals"
           title="Sandals"
           name="test"
         />
         <Input
-          onChange={handleChange}
+          handleChange={handleChange}
           value="heels"
           title="Heels"
           name="test"

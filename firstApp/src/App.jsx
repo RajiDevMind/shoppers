@@ -9,7 +9,6 @@ import SideBar from "./SideBar/SideBar";
 import products from "./db/data";
 import Card from "./components/card";
 
-// const id = new Date().getSeconds();
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -20,14 +19,14 @@ function App() {
     setQuery(e.target.value);
   };
 
-  const filteredItems = products.filter((product) =>
-    product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase() !== -1)
+  const filteredItems = products.filter(
+    (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
   );
 
   // ---------- radio filter -------------
 
   const handleChange = (e) => {
-    selectedCategory(e.target.value);
+    setSelectedCategory(e.target.value);
   };
 
   // ---------- buttons filter -------------
@@ -55,17 +54,7 @@ function App() {
     }
 
     return filteredProducts.map(
-      ({
-        img,
-        title,
-        star,
-        reviews,
-        prevPrice,
-        newPrice,
-        // company,
-        // color,
-        // category,
-      }) => (
+      ({ img, title, star, reviews, prevPrice, newPrice }) => (
         <Card
           key={Math.random()}
           img={img}
@@ -79,7 +68,6 @@ function App() {
     );
   }
   const result = filteredData(products, selectedCategory, query);
-  console.log(result);
 
   return (
     <>

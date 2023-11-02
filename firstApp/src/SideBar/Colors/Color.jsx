@@ -11,28 +11,28 @@ const Color = ({ handleChange }) => {
           <span className="checkmark all"></span>All
         </label>
         <Input
-          onChange={handleChange}
+          handleChange={handleChange}
           value="black"
           title="Black"
           name="test1"
           color="Black"
         />
         <Input
-          onChange={handleChange}
+          handleChange={handleChange}
           value="blue"
           title="Blue"
           name="test1"
           color="blue"
         />
         <Input
-          onChange={handleChange}
+          handleChange={handleChange}
           value="red"
           title="Red"
           name="test1"
           color="red"
         />
         <Input
-          onChange={handleChange}
+          handleChange={handleChange}
           value="green"
           title="Green"
           name="test1"

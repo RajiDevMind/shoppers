@@ -10,9 +10,9 @@ const SideBar = ({ handleChange }) => {
         {/* <div className="logo-container">
           <h1>G</h1>
         </div> */}
-        <Category onChange={handleChange} />
-        <Price onChange={handleChange} />
-        <Colors onChange={handleChange} />
+        <Category handleChange={handleChange} />
+        <Price handleChange={handleChange} />
+        <Colors handleChange={handleChange} />
       </section>
     </>
   );
