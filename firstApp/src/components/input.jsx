@@ -1,8 +1,15 @@
-const Input = () => {
+const Input = ({ handleChange, value, title, name, color }) => {
   return (
     <label htmlFor="" className="sidebar-label-container">
-      <input type="radio" name="text" id="" />
-      <span className="checkmark"></span>All
+      <input
+        onChange={handleChange}
+        value={value}
+        type="radio"
+        name={name}
+        id=""
+      />
+      <span className="checkmark" style={{ backgroundColor: color }}></span>
+      {title}
     </label>
   );
 };
