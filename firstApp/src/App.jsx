@@ -9,7 +9,7 @@ import SideBar from "./SideBar/SideBar";
 import products from "./db/data";
 import Card from "./components/card";
 
-const id = new Date().getTime();
+// const id = new Date().getSeconds();
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -26,7 +26,7 @@ function App() {
 
   // ---------- radio filter -------------
 
-  const handlechange = (e) => {
+  const handleChange = (e) => {
     selectedCategory(e.target.value);
   };
 
@@ -36,7 +36,7 @@ function App() {
   };
 
   function filteredData(product, selected, query) {
-    let filteredProducts = products;
+    let filteredProducts = product;
 
     // filtering input items
     if (query) {
@@ -53,7 +53,6 @@ function App() {
           title === selected
       );
     }
-    const result = filteredData(product, selected, query);
 
     return filteredProducts.map(
       ({
@@ -68,23 +67,26 @@ function App() {
         // category,
       }) => (
         <Card
-          key={id}
+          key={Math.random()}
           img={img}
           title={title}
           star={star}
           reviews={reviews}
+          prevPrice={prevPrice}
           newPrice={newPrice}
         />
       )
     );
   }
+  const result = filteredData(products, selectedCategory, query);
+  console.log(result);
 
   return (
     <>
-      <SideBar handlechange={handlechange} />
-      <Navigation />
-      <Recommended />
-      <Product />
+      <SideBar handleChange={handleChange} />
+      <Navigation query={query} handleInputChange={handleInputChange} />
+      <Recommended handleClick={handleClick} />
+      <Product result={result} />
     </>
   );
 }

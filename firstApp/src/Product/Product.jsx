@@ -1,18 +1,8 @@
 import "./product.css";
 import Card from "../components/card";
 
-const Product = () => {
-  return (
-    <section className="card-container">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-    </section>
-  );
+const Product = ({ result }) => {
+  return <section className="card-container">{result}</section>;
 };
 
 export default Product;
