@@ -30,6 +30,12 @@ input {
   margin-left: 2rem;
   color: #000;
 }
+.user-icon {
+  background: red;
+  width: 30px;
+  border-radius: 30%;
+  box-shadow: 0 2px 4px gray;
+}
 
 @media and screen (max-width: 980px) {
   nav {

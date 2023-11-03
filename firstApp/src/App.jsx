@@ -20,7 +20,9 @@ function App() {
   };
 
   const filteredItems = products.filter(
-    (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
+    (product) =>
+      product.title.toLocaleLowerCase().indexOf(query.toLocaleLowerCase()) !==
+      -1
   );
 
   // ---------- radio filter -------------
