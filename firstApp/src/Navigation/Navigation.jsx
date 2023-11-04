@@ -3,7 +3,7 @@ import shopperslogo from "../assets/shopperslogo.png";
 import { FiHeart } from "react-icons/fi";
 import { AiOutlineShoppingCart, AiOutlineUserAdd } from "react-icons/ai";
 
-const Navigation = ({ handleInputChange, query }) => {
+const Navigation = ({ handleInputChange, query, addCart }) => {
   return (
     <nav>
       <img src={shopperslogo} alt="shoppers logo" />
@@ -21,7 +21,7 @@ const Navigation = ({ handleInputChange, query }) => {
           <FiHeart className="nav-icons" />
         </a>
         <a href="#">
-          <AiOutlineShoppingCart className="nav-icons" />
+          <AiOutlineShoppingCart className="nav-icons" onChange={addCart} />
         </a>
         <a href="#">
           <AiOutlineUserAdd className="nav-icons user-icon" />

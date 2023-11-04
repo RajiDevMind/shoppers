@@ -40,7 +40,8 @@
 }
 
 .bag-icon {
-  color: #535353;
+  color: #ffffff;
+  margin-right: 10px;
 }
 .price {
   position: relative;
@@ -51,6 +52,28 @@
   top: -2px;
   left: 70px;
   color: green;
+}
+.addToCartBttn ~ p {
+  max-width: 280px;
+}
+.addToCartBttn {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(19, 19, 19);
+  border: none;
+  box-shadow: 1px 1px 4px #000000;
+  max-width: 100%;
+  color: #ffffff;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.addToCartBttn:hover {
+  background-color: #535353;
+  color: white;
+  cursor: pointer;
+  transition: all 1s ease;
 }
 
 @media and screen (max-width: 800px) {
