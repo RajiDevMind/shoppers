@@ -1,15 +1,12 @@
 nav {
   display: flex;
-  /* border-bottom: 2px solid #f3f3f3; */
   justify-content: space-around;
   align-items: center;
-  /* padding: 20px; */
   position: relative;
-  z-index: 999;
-  /* margin-left: 2rem; */
+  z-index: 2;
   max-width: 80%;
   right: -300px;
-  /* top: -200px; */
+  top: 0;
 }
 nav img {
   width: 5rem;
@@ -19,7 +16,6 @@ input {
   border: none;
   background: #f7f6f6;
   outline: none;
-  /* margin-right: 20px; */
   border-radius: 5px;
   position: relative;
   width: 20rem;
@@ -37,25 +33,20 @@ input {
   box-shadow: 0 2px 4px gray;
 }
 
-@media and screen (max-width: 980px) {
+@media screen and (max-width: 980px) {
   nav {
     display: flex;
-    border-bottom: 2px solid #f3f3f3;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    position: relative;
+    /* border-bottom: 2px solid #f3f3f3; */
+    position: absolute;
     z-index: 5;
-    /* margin-left: 2rem; */
-    max-width: 50%;
-    right: 300px;
-    top: -200px;
+    max-width: 100%;
+    right: 40px;
+    top: 0;
   }
 }
-@media and screen (min-width: 760px) {
+@media screen and (max-width: 760px) {
   .profile-container {
-    visibility: hidden;
     display: none;
-    z-index: 1;
+    /* z-index: 1; */
   }
 }

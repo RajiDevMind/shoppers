@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: 18.5rem;
-  z-index: 2;
+  z-index: 3;
 }
 .card {
   margin: 10px;
@@ -76,9 +76,29 @@
   transition: all 1s ease;
 }
 
-@media and screen (max-width: 800px) {
+@media screen and (max-width: 800px) {
+  .card-container {
+    z-index: 4;
+    position: absolute;
+    top: 160px;
+    left: -300px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card-container {
+    display: flex;
+    width: 100%;
+  }
   .card-img {
-    width: 10rem;
-    /* margin-bottom: 1rem; */
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .card-container {
+    display: block;
+    width: 90%;
+  }
+  .card-img {
+    width: 100%;
   }
 }
